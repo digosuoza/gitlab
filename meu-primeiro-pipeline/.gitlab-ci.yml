@@ -1,0 +1,27 @@
+stages:
+  - build
+  - test
+  - deploy
+
+image: alpine:3.8
+
+build_a:
+  stage: build
+  script:
+    - echo "Ola Mundo"
+
+build_b:
+  stage: build
+  script:
+    - echo "Segundo build ${USER_DB}"
+
+test_a:
+  stage: test
+  script:
+    - echo "Ola Mundo no teste"
+
+deploy_a:
+  stage: deploy
+  script:
+    - echo "Estou aqui"
+    - echo "Agora aqui"
